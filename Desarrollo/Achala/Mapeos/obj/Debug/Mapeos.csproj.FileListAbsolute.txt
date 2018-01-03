@@ -1,0 +1,16 @@
+D:\Manu\inmo\inmo_achala\Desarrollo\Achala\Mapeos\bin\Debug\Mapeos.dll
+D:\Manu\inmo\inmo_achala\Desarrollo\Achala\Mapeos\bin\Debug\Mapeos.pdb
+D:\Manu\inmo\inmo_achala\Desarrollo\Achala\Mapeos\obj\Debug\Mapeos.dll
+D:\Manu\inmo\inmo_achala\Desarrollo\Achala\Mapeos\obj\Debug\Mapeos.pdb
+D:\Manu\inmo\inmo_achala\Desarrollo\Achala\Mapeos\bin\Debug\FluentNHibernate.dll
+D:\Manu\inmo\inmo_achala\Desarrollo\Achala\Mapeos\bin\Debug\Iesi.Collections.dll
+D:\Manu\inmo\inmo_achala\Desarrollo\Achala\Mapeos\bin\Debug\Modelo.dll
+D:\Manu\inmo\inmo_achala\Desarrollo\Achala\Mapeos\bin\Debug\NHibernate.dll
+D:\Manu\inmo\inmo_achala\Desarrollo\Achala\Mapeos\bin\Debug\Modelo.pdb
+D:\Manu\inmo\inmo_achala\Desarrollo\Achala\Mapeos\bin\Debug\FluentNHibernate.pdb
+D:\Manu\inmo\inmo_achala\Desarrollo\Achala\Mapeos\bin\Debug\FluentNHibernate.xml
+D:\Manu\inmo\inmo_achala\Desarrollo\Achala\Mapeos\bin\Debug\Iesi.Collections.xml
+D:\Manu\inmo\inmo_achala\Desarrollo\Achala\Mapeos\bin\Debug\NHibernate.xml
+D:\Manu\inmo\inmo_achala\Desarrollo\Achala\Mapeos\obj\Debug\Mapeos.csprojResolveAssemblyReference.cache
+D:\Manu\inmo\inmo_achala\Desarrollo\Achala\Mapeos\bin\Debug\Core.dll
+D:\Manu\inmo\inmo_achala\Desarrollo\Achala\Mapeos\bin\Debug\Core.pdb

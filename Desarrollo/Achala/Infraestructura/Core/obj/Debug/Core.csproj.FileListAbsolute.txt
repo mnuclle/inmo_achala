@@ -1,0 +1,10 @@
+D:\Manu\inmo\inmo_achala\Desarrollo\Achala\Core\bin\Debug\Core.dll
+D:\Manu\inmo\inmo_achala\Desarrollo\Achala\Core\bin\Debug\Core.pdb
+D:\Manu\inmo\inmo_achala\Desarrollo\Achala\Core\obj\Debug\Core.csprojResolveAssemblyReference.cache
+D:\Manu\inmo\inmo_achala\Desarrollo\Achala\Core\obj\Debug\Core.dll
+D:\Manu\inmo\inmo_achala\Desarrollo\Achala\Core\obj\Debug\Core.pdb
+D:\Manu\inmo\inmo_achala\Desarrollo\Achala\Infraestructura\Core\bin\Debug\Core.dll
+D:\Manu\inmo\inmo_achala\Desarrollo\Achala\Infraestructura\Core\bin\Debug\Core.pdb
+D:\Manu\inmo\inmo_achala\Desarrollo\Achala\Infraestructura\Core\obj\Debug\Core.csprojResolveAssemblyReference.cache
+D:\Manu\inmo\inmo_achala\Desarrollo\Achala\Infraestructura\Core\obj\Debug\Core.dll
+D:\Manu\inmo\inmo_achala\Desarrollo\Achala\Infraestructura\Core\obj\Debug\Core.pdb
