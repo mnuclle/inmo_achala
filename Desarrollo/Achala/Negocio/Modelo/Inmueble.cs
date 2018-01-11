@@ -20,5 +20,8 @@ namespace Modelo
         public virtual int Antiguedad { get; set; }
         public virtual Domicilio Domicilio { get; set; }
         public virtual TipoPropiedad TipoPropiedad { get; set; }
+        public virtual EstadoInmueble EstadoInmueble { get; set; }
+        public virtual DateTime FechaBaja { get; set; }
+        public virtual List<ImagenInmueble> Imagenes { get; set; }
     }
 }

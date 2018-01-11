@@ -53,8 +53,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DomicilioMap.cs" />
+    <Compile Include="ImagenInmuebleMap.cs" />
     <Compile Include="InmuebleMap.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PublicacionMap.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
