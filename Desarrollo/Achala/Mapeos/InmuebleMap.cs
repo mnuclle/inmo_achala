@@ -26,6 +26,7 @@ namespace Mapeos
             Map(x => x.SuperficieTotal).Column("SUPERFICIE_TOTAL").Nullable().Length(6);
             References<Domicilio>(x => x.Domicilio).Column("ID_DOMICILIO").Not.Nullable().Not.LazyLoad().Cascade.SaveUpdate();
             Map(x => x.TipoPropiedad).Column("ID_TIPO_PROPIEDAD").CustomType<TipoPropiedad>().Not.Nullable();
+            HasMany(x => x.Imagenes).KeyColumn("ID_IMAGEN_INMUEBLE");
         }
     }
 }

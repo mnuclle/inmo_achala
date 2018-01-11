@@ -42,6 +42,7 @@
   <ItemGroup>
     <Compile Include="InmuebleServicio.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PublicacionServicio.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Datos\Repositorios\Repositorios.csproj">
@@ -51,6 +52,10 @@
     <ProjectReference Include="..\Infraestructura\Core.Datos\Core.Datos.csproj">
       <Project>{5F697A57-685E-45C4-BBB0-34C16007D80A}</Project>
       <Name>Core.Datos</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Infraestructura\Core\Core.csproj">
+      <Project>{A4DB8D98-D5C8-4123-9AA1-EE763D8D127E}</Project>
+      <Name>Core</Name>
     </ProjectReference>
     <ProjectReference Include="..\Negocio\Modelo\Modelo.csproj">
       <Project>{354EC486-796E-474B-BAE1-456571172ED9}</Project>

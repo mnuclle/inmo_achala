@@ -52,8 +52,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ImagenInmuebleRepositorio.cs" />
     <Compile Include="InmuebleRepositorio.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PublicacionRepositorio.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\Infraestructura\Core.Datos\Core.Datos.csproj">
