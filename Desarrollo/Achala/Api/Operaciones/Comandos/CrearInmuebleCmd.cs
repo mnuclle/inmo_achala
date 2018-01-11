@@ -14,6 +14,8 @@ namespace Api.Operaciones.Comandos
         public string Calle { get; set; }
         public int Altura { get; set; }
         public int Piso { get; set; }
+
+        [Required(ErrorMessage = "El tipo de propiedad es un dato requerido")]
         public int IdTipoPropiedad { get; set; }
     }
 }

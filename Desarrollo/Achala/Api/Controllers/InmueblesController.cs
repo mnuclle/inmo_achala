@@ -56,13 +56,37 @@ namespace Api.Controllers
         }
 
         // PUT: api/Inmuebles/5
-        public void Put(int id, [FromBody]string value)
+        public IHttpActionResult Put(int id, [FromBody]CrearInmuebleCmd cmd)
         {
+            var inmueble = _inmuebleServicio.ObtenerPorId(id);
+            if (inmueble == null)
+            {
+                return NotFound();
+            }
+            inmueble.Nombre = cmd.Nombre;
+            inmueble.TipoPropiedad = (TipoPropiedad)cmd.IdTipoPropiedad;
+            inmueble.Domicilio = new Domicilio()
+            {
+                Calle = cmd.Calle,
+                Altura = cmd.Altura,
+                Piso = cmd.Piso
+            };
+
+            _inmuebleServicio.Guardar(inmueble);
+            return Ok();
+            
         }
 
         // DELETE: api/Inmuebles/5
-        public void Delete(int id)
+        public IHttpActionResult Delete(int id)
         {
+            var inmueble = _inmuebleServicio.ObtenerPorId(id);
+            if (inmueble == null)
+            {
+                return NotFound();
+            }
+            _inmuebleServicio.Eliminar(inmueble);
+            return Ok();
         }
     }
 }

@@ -1,10 +1,6 @@
 -- -----------------------------------------------------
 -- Schema achala_inmo_db
 -- -----------------------------------------------------
-
--- -----------------------------------------------------
--- Schema achala_inmo_db
--- -----------------------------------------------------
 CREATE SCHEMA IF NOT EXISTS `achala_inmo_db` DEFAULT CHARACTER SET utf8 ;
 USE `achala_inmo_db` ;
 
@@ -279,7 +275,3 @@ CREATE TABLE IF NOT EXISTS `achala_inmo_db`.`AMBIENTES_X_INMUEBLE` (
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
-
-SET SQL_MODE=@OLD_SQL_MODE;
-SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
-SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;

@@ -28,6 +28,11 @@ namespace Servicios
         {
             return _inmuebleRepositorio.ConsultarPorId(id);
         }
+
+        public void Eliminar(Inmueble inmueble)
+        {
+            _inmuebleRepositorio.Eliminar(inmueble);
+        }
         
     }
 }

@@ -25,5 +25,11 @@ namespace Core
         {
             Sesion.SaveOrUpdate(entidad);
         }
+
+        public void Eliminar(TEntidad entidad)
+        {
+            Sesion.Delete(entidad);
+        }
+
     }
 }
