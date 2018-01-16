@@ -3,14 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Core;
 
 namespace Modelo
 {
-    public enum EstadoInmueble
+    public enum TipoBarrio 
     {
-        ACTIVO = 1,
-        RESERVADO = 2,
-        FINALIZADO = 3,
-        BAJA = 4
+        ABIERTO = 1,
+        CERRADO = 2,
+        SEGURIDAD = 3,
+        COUNTRY = 4
     }
 }

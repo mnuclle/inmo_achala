@@ -43,12 +43,33 @@ namespace Api.Controllers
         {
             var inmueble = new Inmueble();
             inmueble.Nombre = cmd.Nombre;
+            inmueble.Descripcion = cmd.Descripcion;
+            inmueble.Antiguedad = cmd.Antiguedad;
+            inmueble.CantidadAmbientes = cmd.CantidadAmbientes;
+            inmueble.CantidadBaños = cmd.CantidadBaños;
+            inmueble.CantidadDormitorios = cmd.CantidadDormitorios;
+            inmueble.EstadoInmueble = EstadoInmueble.ACTIVO;
             inmueble.TipoPropiedad = (TipoPropiedad)cmd.IdTipoPropiedad;
+            inmueble.Imagenes = cmd.Imagenes;
             inmueble.Domicilio = new Domicilio()
             {
                 Calle = cmd.Calle,
                 Altura = cmd.Altura,
-                Piso = cmd.Piso
+                Piso = cmd.Piso,
+                Departamento = cmd.Departamento,
+                Manzana = cmd.Manzana,
+                Torre = cmd.Manzana,
+                Latitud = cmd.Latitud,
+                Longitud = cmd.Longitud,
+                Lote = cmd.Lote,
+                Barrio = new Barrio()
+                {
+                    Id = cmd.IdBarrio
+                },
+                Localidad = new Localidad()
+                {
+                    Id = cmd.IdLocalidad
+                }
             };
 
             _inmuebleServicio.Guardar(inmueble);
@@ -64,12 +85,33 @@ namespace Api.Controllers
                 return NotFound();
             }
             inmueble.Nombre = cmd.Nombre;
+            inmueble.Descripcion = cmd.Descripcion;
+            inmueble.Antiguedad = cmd.Antiguedad;
+            inmueble.CantidadAmbientes = cmd.CantidadAmbientes;
+            inmueble.CantidadBaños = cmd.CantidadBaños;
+            inmueble.CantidadDormitorios = cmd.CantidadDormitorios;
+            inmueble.EstadoInmueble = (EstadoInmueble)cmd.IdEstadoInmueble;
             inmueble.TipoPropiedad = (TipoPropiedad)cmd.IdTipoPropiedad;
+            inmueble.Imagenes = cmd.Imagenes;
             inmueble.Domicilio = new Domicilio()
             {
                 Calle = cmd.Calle,
                 Altura = cmd.Altura,
-                Piso = cmd.Piso
+                Piso = cmd.Piso,
+                Departamento = cmd.Departamento,
+                Manzana = cmd.Manzana,
+                Torre = cmd.Manzana,
+                Latitud = cmd.Latitud,
+                Longitud = cmd.Longitud,
+                Lote = cmd.Lote,
+                Barrio = new Barrio()
+                {
+                    Id = cmd.IdBarrio
+                },
+                Localidad = new Localidad()
+                {
+                    Id = cmd.IdLocalidad
+                }
             };
 
             _inmuebleServicio.Guardar(inmueble);
@@ -85,6 +127,8 @@ namespace Api.Controllers
             {
                 return NotFound();
             }
+            inmueble.FechaBaja = DateTime.Now;
+            inmueble.EstadoInmueble = EstadoInmueble.BAJA;
             _inmuebleServicio.Eliminar(inmueble);
             return Ok();
         }

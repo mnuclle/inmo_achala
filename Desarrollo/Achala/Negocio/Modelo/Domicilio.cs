@@ -20,5 +20,6 @@ namespace Modelo
         public virtual string Longitud { get; set; }
         public virtual Barrio Barrio { get; set; }
         public virtual Localidad Localidad { get; set; }
+        public virtual TipoBarrio TipoBarrio { get; set; }
     }
 }
