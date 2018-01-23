@@ -11,7 +11,7 @@ namespace Modelo
     {
         ABIERTO = 1,
         CERRADO = 2,
-        SEGURIDAD = 3,
+        CON_SEGURIDAD = 3,
         COUNTRY = 4
     }
 }

@@ -8,9 +8,10 @@ namespace Modelo
 {
     public enum EstadoPublicacion
     {
-        DEPARTAMENTO = 1,
-        CASA = 2,
-        LOCAL = 3
+        PENDIENTE = 1,
+        ACTIVO = 2,
+        FINALIZADA = 3,
+        BAJA = 4
     }
     
 }

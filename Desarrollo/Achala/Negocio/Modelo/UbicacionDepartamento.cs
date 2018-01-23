@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace Modelo
 {
-    public enum TipoOperacion
+    public enum UbicacionDepartamento
     {
-        VENTA = 1,
-        ALQUILER = 2,
-        ALQUILER_TEMPORARIO = 3,
-        EMPRENDIMIENTOS = 4
+        INTERNO = 1,
+        CONTRAFRENTE = 2,
+        FRENTE = 3,
+        LATERAL = 4
     }
 }

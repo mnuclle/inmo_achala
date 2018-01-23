@@ -9,8 +9,8 @@ namespace Modelo
     public enum EstadoInmueble
     {
         ACTIVO = 1,
-        RESERVADO = 2,
-        FINALIZADO = 3,
+        VENDIDO = 2,
+        RESERVADO = 3,
         BAJA = 4
     }
 }
