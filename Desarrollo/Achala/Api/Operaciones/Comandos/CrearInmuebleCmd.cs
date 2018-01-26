@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
+using Core.Formateadores.MultipartData.Infrastructure;
 using Modelo;
 
 namespace Api.Operaciones.Comandos
@@ -30,8 +31,12 @@ namespace Api.Operaciones.Comandos
         public int IdLocalidad { get; set; }
         public string Latitud { get; set; }
         public string Longitud { get; set; }
-        public int IdTipoPropiedad { get; set; }
-        public int IdEstadoInmueble { get; set; }
-        public List<ImagenInmueble> Imagenes { get; set; }
+        public TipoBarrio? IdTipoBarrio { get; set; }
+        public TipoPropiedad IdTipoPropiedad { get; set; }
+        public EstadoInmueble IdEstadoInmueble { get; set; }
+        public List<HttpFile> Imagenes { get; set; }
+        public string AEstrenar { get; set; }
+        public UbicacionDepartamento? IdUbicacionDepartamento { get; set; }
+        public TipoEmprendimiento? IdTipoEmprendimiento { get; set; }
     }
 }

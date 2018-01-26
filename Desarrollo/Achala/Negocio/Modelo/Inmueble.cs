@@ -22,6 +22,11 @@ namespace Modelo
         public virtual TipoPropiedad TipoPropiedad { get; set; }
         public virtual EstadoInmueble EstadoInmueble { get; set; }
         public virtual DateTime FechaBaja { get; set; }
+        public virtual DateTime FechaAlta { get; set; }
+        public virtual DateTime FechaModificacion { get; set; }
         public virtual List<ImagenInmueble> Imagenes { get; set; }
+        public virtual UbicacionDepartamento? UbicacionDepartamento { get; set; }
+        public virtual string AEstrenar { get; set; }
+        public virtual TipoEmprendimiento? TipoEmprendimiento { get; set; }
     }
 }

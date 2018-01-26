@@ -40,7 +40,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BarrioServicio.cs" />
     <Compile Include="InmuebleServicio.cs" />
+    <Compile Include="LocalidadServicio.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="PublicacionServicio.cs" />
   </ItemGroup>
@@ -61,6 +63,9 @@
       <Project>{354EC486-796E-474B-BAE1-456571172ED9}</Project>
       <Name>Modelo</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

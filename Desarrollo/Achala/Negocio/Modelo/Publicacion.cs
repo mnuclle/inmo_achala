@@ -18,5 +18,6 @@ namespace Modelo
         public virtual EstadoPublicacion EstadoPublicacion { get; set; }
         public virtual Inmueble Inmueble { get; set; }
         public virtual int Prioridad { get; set; }
+        public virtual DateTime FechaModificacion { get; set; }
     }
 }

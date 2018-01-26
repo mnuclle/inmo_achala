@@ -15,9 +15,13 @@ namespace Api.Controllers
     {
 
         private readonly InmuebleServicio _inmuebleServicio;
+        private readonly BarrioServicio _barrioServicio;
+        private readonly LocalidadServicio _localidadServicio;
 
-        public InmueblesController(InmuebleServicio inmuebleServicio) {
+        public InmueblesController(InmuebleServicio inmuebleServicio,BarrioServicio barrioServicio, LocalidadServicio localidadServicio) {
             this._inmuebleServicio = inmuebleServicio;
+            this._barrioServicio = barrioServicio;
+            this._localidadServicio = localidadServicio;
         }
 
         // GET: api/Inmuebles
@@ -42,6 +46,8 @@ namespace Api.Controllers
         public IHttpActionResult Post([FromBody]CrearInmuebleCmd cmd)
         {
             var inmueble = new Inmueble();
+            var barrio = _barrioServicio.ObtenerPorId(cmd.IdBarrio);
+            var localidad = _localidadServicio.ObtenerPorId(cmd.IdLocalidad);
             inmueble.Nombre = cmd.Nombre;
             inmueble.Descripcion = cmd.Descripcion;
             inmueble.Antiguedad = cmd.Antiguedad;
@@ -49,8 +55,8 @@ namespace Api.Controllers
             inmueble.CantidadBaños = cmd.CantidadBaños;
             inmueble.CantidadDormitorios = cmd.CantidadDormitorios;
             inmueble.EstadoInmueble = EstadoInmueble.ACTIVO;
-            inmueble.TipoPropiedad = (TipoPropiedad)cmd.IdTipoPropiedad;
-            inmueble.Imagenes = cmd.Imagenes;
+            inmueble.TipoPropiedad = cmd.IdTipoPropiedad;
+            
             inmueble.Domicilio = new Domicilio()
             {
                 Calle = cmd.Calle,
@@ -62,15 +68,15 @@ namespace Api.Controllers
                 Latitud = cmd.Latitud,
                 Longitud = cmd.Longitud,
                 Lote = cmd.Lote,
-                Barrio = new Barrio()
-                {
-                    Id = cmd.IdBarrio
-                },
-                Localidad = new Localidad()
-                {
-                    Id = cmd.IdLocalidad
-                }
+                Barrio = barrio,
+                Localidad = localidad,
+                TipoBarrio = cmd.IdTipoBarrio
             };
+            inmueble.AEstrenar = cmd.AEstrenar;
+            inmueble.UbicacionDepartamento = cmd.IdUbicacionDepartamento;
+            inmueble.TipoEmprendimiento = cmd.IdTipoEmprendimiento;
+            inmueble.FechaAlta = DateTime.Now;
+            inmueble.FechaModificacion = DateTime.Now;
 
             _inmuebleServicio.Guardar(inmueble);
             return Ok();
@@ -90,9 +96,9 @@ namespace Api.Controllers
             inmueble.CantidadAmbientes = cmd.CantidadAmbientes;
             inmueble.CantidadBaños = cmd.CantidadBaños;
             inmueble.CantidadDormitorios = cmd.CantidadDormitorios;
-            inmueble.EstadoInmueble = (EstadoInmueble)cmd.IdEstadoInmueble;
-            inmueble.TipoPropiedad = (TipoPropiedad)cmd.IdTipoPropiedad;
-            inmueble.Imagenes = cmd.Imagenes;
+            inmueble.EstadoInmueble = cmd.IdEstadoInmueble;
+            inmueble.TipoPropiedad = cmd.IdTipoPropiedad;
+            
             inmueble.Domicilio = new Domicilio()
             {
                 Calle = cmd.Calle,
@@ -106,13 +112,18 @@ namespace Api.Controllers
                 Lote = cmd.Lote,
                 Barrio = new Barrio()
                 {
-                    Id = cmd.IdBarrio
+                    Id = (int)cmd.IdBarrio
                 },
                 Localidad = new Localidad()
                 {
-                    Id = cmd.IdLocalidad
-                }
+                    Id = (int)cmd.IdLocalidad
+                },
+                TipoBarrio = cmd.IdTipoBarrio
             };
+            inmueble.AEstrenar = cmd.AEstrenar;
+            inmueble.UbicacionDepartamento = cmd.IdUbicacionDepartamento;
+            inmueble.TipoEmprendimiento = cmd.IdTipoEmprendimiento;
+            inmueble.FechaModificacion = DateTime.Now;
 
             _inmuebleServicio.Guardar(inmueble);
             return Ok();
@@ -128,6 +139,7 @@ namespace Api.Controllers
                 return NotFound();
             }
             inmueble.FechaBaja = DateTime.Now;
+            inmueble.FechaModificacion = DateTime.Now;
             inmueble.EstadoInmueble = EstadoInmueble.BAJA;
             _inmuebleServicio.Eliminar(inmueble);
             return Ok();

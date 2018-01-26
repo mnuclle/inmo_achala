@@ -52,8 +52,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BarrioRepositorio.cs" />
     <Compile Include="ImagenInmuebleRepositorio.cs" />
     <Compile Include="InmuebleRepositorio.cs" />
+    <Compile Include="LocalidadRepositorio.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="PublicacionRepositorio.cs" />
   </ItemGroup>
@@ -72,6 +74,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <None Include="app.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -23,13 +24,14 @@ namespace Servicios
         public void Guardar(Inmueble inmueble)
         {
             _inmuebleRepositorio.Guardar(inmueble);
-
-            foreach (var imagen in inmueble.Imagenes)
+            if (inmueble.Imagenes != null)
             {
-                imagen.Inmueble = inmueble;
-                _imagenInmuebleRepositorio.Guardar(imagen);
+                foreach (var imagen in inmueble.Imagenes)
+                {
+                    imagen.Inmueble = inmueble;
+                    _imagenInmuebleRepositorio.Guardar(imagen);
+                }
             }
-            
         }
 
         public Inmueble ObtenerPorId(int id)

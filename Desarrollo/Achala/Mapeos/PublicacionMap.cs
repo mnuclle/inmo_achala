@@ -23,6 +23,7 @@ namespace Mapeos
             Map(x => x.EstadoPublicacion).Column("ID_ESTADO_PUBLICACION").CustomType<EstadoPublicacion>().Not.Nullable().Length(2);
             References<Inmueble>(x => x.Inmueble).Column("ID_INMUEBLE").Not.Nullable().Not.LazyLoad();
             Map(x => x.Prioridad).Column("PRIORIDAD").Not.Nullable().Length(2);
+            Map(x => x.FechaModificacion).Column("FEC_MODIF").Not.Nullable();
         }
     }
 }

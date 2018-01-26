@@ -30,18 +30,20 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Iesi.Collections, Version=4.0.0.0, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
-      <HintPath>..\packages\Iesi.Collections.4.0.0.4000\lib\net40\Iesi.Collections.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="NHibernate, Version=4.0.0.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
-      <HintPath>..\packages\NHibernate.4.0.0.4000\lib\net40\NHibernate.dll</HintPath>
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Net.Http.Formatting">
+      <HintPath>..\..\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
     <Reference Include="System.Web" />
+    <Reference Include="System.Web.Http">
+      <HintPath>..\..\packages\Microsoft.AspNet.WebApi.Core.5.2.3\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -51,14 +53,28 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Entidad.cs" />
+    <Compile Include="Formateadores\Formateadores.cs" />
+    <Compile Include="Formateadores\MultipartData\Converters\FormDataToObjectConverter.cs" />
+    <Compile Include="Formateadores\MultipartData\Converters\HttpContentToFormDataConverter.cs" />
+    <Compile Include="Formateadores\MultipartData\Converters\ObjectToMultipartDataByteArrayConverter.cs" />
+    <Compile Include="Formateadores\MultipartData\FormMultipartEncodedMediaTypeFormatter.cs" />
+    <Compile Include="Formateadores\MultipartData\Infrastructure\Extensions\TypeExtensions.cs" />
+    <Compile Include="Formateadores\MultipartData\Infrastructure\FormData.cs" />
+    <Compile Include="Formateadores\MultipartData\Infrastructure\HttpFile.cs" />
+    <Compile Include="Formateadores\MultipartData\Infrastructure\Logger\FormatterLoggerAdapter.cs" />
+    <Compile Include="Formateadores\MultipartData\Infrastructure\Logger\FormDataConverterLogger.cs" />
+    <Compile Include="Formateadores\MultipartData\Infrastructure\Logger\IFormDataConverterLogger.cs" />
+    <Compile Include="Formateadores\MultipartData\Infrastructure\MultipartFormatterSettings.cs" />
+    <Compile Include="Formateadores\MultipartData\Infrastructure\TypeConverters\BooleanConverterEx.cs" />
+    <Compile Include="Formateadores\MultipartData\Infrastructure\TypeConverters\DateTimeConverterISO8601.cs" />
+    <Compile Include="Formateadores\MultipartData\Infrastructure\TypeConverters\FromStringConverterAdapter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="app.config" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="File\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

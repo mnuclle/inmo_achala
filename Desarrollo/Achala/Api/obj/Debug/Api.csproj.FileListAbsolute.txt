@@ -167,3 +167,12 @@ D:\Repos\inmo_achala\Desarrollo\Achala\Api\obj\Debug\Api.csprojResolveAssemblyRe
 D:\Repos\inmo_achala\Desarrollo\Achala\Api\obj\Debug\Api.csproj.CoreCompileInputs.cache
 D:\Repos\inmo_achala\Desarrollo\Achala\Api\obj\Debug\Api.dll
 D:\Repos\inmo_achala\Desarrollo\Achala\Api\obj\Debug\Api.pdb
+D:\Manu\inmo\inmo_achala\Desarrollo\Achala\Api\bin\es\System.Web.Razor.resources.dll
+D:\Manu\inmo\inmo_achala\Desarrollo\Achala\Api\bin\es\System.Web.Webpages.resources.dll
+D:\Manu\inmo\inmo_achala\Desarrollo\Achala\Api\bin\es\System.Web.Webpages.Deployment.resources.dll
+D:\Manu\inmo\inmo_achala\Desarrollo\Achala\Api\bin\es\System.Web.Webpages.Razor.resources.dll
+D:\Manu\inmo\inmo_achala\Desarrollo\Achala\Api\bin\es\System.Web.Helpers.resources.dll
+D:\Manu\inmo\inmo_achala\Desarrollo\Achala\Api\bin\es\System.Web.Mvc.resources.dll
+D:\Manu\inmo\inmo_achala\Desarrollo\Achala\Api\bin\es\System.Net.Http.Formatting.resources.dll
+D:\Manu\inmo\inmo_achala\Desarrollo\Achala\Api\bin\es\System.Web.Http.resources.dll
+D:\Manu\inmo\inmo_achala\Desarrollo\Achala\Api\bin\es\System.Web.Http.WebHost.resources.dll

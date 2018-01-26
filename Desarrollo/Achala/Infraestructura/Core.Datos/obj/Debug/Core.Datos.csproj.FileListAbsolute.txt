@@ -35,3 +35,10 @@ D:\Repos\inmo_achala\Desarrollo\Achala\Infraestructura\Core.Datos\obj\Debug\Core
 D:\Repos\inmo_achala\Desarrollo\Achala\Infraestructura\Core.Datos\obj\Debug\Core.Datos.csproj.CoreCompileInputs.cache
 D:\Repos\inmo_achala\Desarrollo\Achala\Infraestructura\Core.Datos\obj\Debug\Core.Datos.dll
 D:\Repos\inmo_achala\Desarrollo\Achala\Infraestructura\Core.Datos\obj\Debug\Core.Datos.pdb
+D:\Manu\inmo\inmo_achala\Desarrollo\Achala\Infraestructura\Core.Datos\bin\Debug\Core.Datos.dll.config
+D:\Manu\inmo\inmo_achala\Desarrollo\Achala\Infraestructura\Core.Datos\bin\Debug\System.Web.Http.dll
+D:\Manu\inmo\inmo_achala\Desarrollo\Achala\Infraestructura\Core.Datos\bin\Debug\System.Net.Http.Formatting.dll
+D:\Manu\inmo\inmo_achala\Desarrollo\Achala\Infraestructura\Core.Datos\bin\Debug\System.Web.Http.xml
+D:\Manu\inmo\inmo_achala\Desarrollo\Achala\Infraestructura\Core.Datos\bin\Debug\System.Net.Http.Formatting.xml
+D:\Manu\inmo\inmo_achala\Desarrollo\Achala\Infraestructura\Core.Datos\bin\Debug\es\System.Web.Http.resources.dll
+D:\Manu\inmo\inmo_achala\Desarrollo\Achala\Infraestructura\Core.Datos\bin\Debug\es\System.Net.Http.Formatting.resources.dll

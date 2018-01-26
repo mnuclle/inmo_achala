@@ -25,7 +25,14 @@ namespace Mapeos
             Map(x => x.SuperficieTerreno).Column("SUPERFICIE_TERRENO").Nullable().Length(5);
             Map(x => x.SuperficieTotal).Column("SUPERFICIE_TOTAL").Nullable().Length(6);
             References<Domicilio>(x => x.Domicilio).Column("ID_DOMICILIO").Not.Nullable().Not.LazyLoad().Cascade.SaveUpdate();
-            Map(x => x.TipoPropiedad).Column("ID_TIPO_PROPIEDAD").CustomType<TipoPropiedad>().Not.Nullable();
+            Map(x => x.TipoPropiedad).Column("ID_TIPO_PROPIEDAD").CustomType<TipoPropiedad>().Nullable();
+            Map(x => x.EstadoInmueble).Column("ID_ESTADO_INMUEBLE").CustomType<EstadoInmueble>().Not.Nullable();
+            Map(x => x.FechaBaja).Column("FEC_BAJA").Nullable();
+            Map(x => x.FechaAlta).Column("FEC_ALTA").Not.Nullable();
+            Map(x => x.FechaModificacion).Column("FEC_MODIF").Not.Nullable();
+            Map(x => x.UbicacionDepartamento).Column("ID_UBICACION_DEPARTAMENTO").CustomType<UbicacionDepartamento>().Nullable();
+            Map(x => x.AEstrenar).Column("A_ESTRENAR").Nullable();
+            Map(x => x.TipoEmprendimiento).Column("ID_TIPO_EMPRENDIMIENTO").CustomType<TipoEmprendimiento>().Nullable();
             HasMany(x => x.Imagenes).KeyColumn("ID_IMAGEN_INMUEBLE");
         }
     }
