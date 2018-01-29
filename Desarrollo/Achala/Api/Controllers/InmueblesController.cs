@@ -25,9 +25,16 @@ namespace Api.Controllers
         }
 
         // GET: api/Inmuebles
-        public IEnumerable<string> Get()
+        public IEnumerable<Inmueble> Get()
         {
-            return new string[] { "value1", "value2" };
+            IList<Inmueble> listaInmuebles = _inmuebleServicio.ObtenerTodos();
+            /* se comenta hasta saber como obtener todas por idInmueble.
+            foreach (var inmueble in listaInmuebles)
+            {
+                inmueble.Imagenes = _imagenInmuebleServicio.Obtener
+            }
+            */
+            return listaInmuebles;
         }
 
         // GET: api/Inmuebles/5
@@ -86,6 +93,8 @@ namespace Api.Controllers
         public IHttpActionResult Put(int id, [FromBody]CrearInmuebleCmd cmd)
         {
             var inmueble = _inmuebleServicio.ObtenerPorId(id);
+            var barrio = _barrioServicio.ObtenerPorId(cmd.IdBarrio);
+            var localidad = _localidadServicio.ObtenerPorId(cmd.IdLocalidad);
             if (inmueble == null)
             {
                 return NotFound();
@@ -110,14 +119,8 @@ namespace Api.Controllers
                 Latitud = cmd.Latitud,
                 Longitud = cmd.Longitud,
                 Lote = cmd.Lote,
-                Barrio = new Barrio()
-                {
-                    Id = (int)cmd.IdBarrio
-                },
-                Localidad = new Localidad()
-                {
-                    Id = (int)cmd.IdLocalidad
-                },
+                Barrio = barrio,
+                Localidad = localidad,
                 TipoBarrio = cmd.IdTipoBarrio
             };
             inmueble.AEstrenar = cmd.AEstrenar;

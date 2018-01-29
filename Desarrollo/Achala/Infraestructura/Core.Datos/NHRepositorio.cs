@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using NHibernate.Linq;
 
 namespace Core
 {
@@ -31,5 +32,9 @@ namespace Core
             Sesion.SaveOrUpdate(entidad);
         }
 
+        public IList<TEntidad> ObtenerTodas()
+        {
+            return Sesion.Query<TEntidad>().ToList();
+        }
     }
 }

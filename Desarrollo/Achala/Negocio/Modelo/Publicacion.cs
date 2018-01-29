@@ -14,7 +14,7 @@ namespace Modelo
         public virtual TipoOperacion TipoOperacion { get; set; }
         public virtual double Precio { get; set; }
         public virtual DateTime FechaPublicacion { get; set; }
-        public virtual DateTime FechaBaja { get; set; }
+        public virtual DateTime? FechaBaja { get; set; }
         public virtual EstadoPublicacion EstadoPublicacion { get; set; }
         public virtual Inmueble Inmueble { get; set; }
         public virtual int Prioridad { get; set; }

@@ -43,6 +43,11 @@ namespace Servicios
         {
             _inmuebleRepositorio.Eliminar(inmueble);
         }
+
+        public IList<Inmueble> ObtenerTodos()
+        {
+            return _inmuebleRepositorio.ObtenerTodas();
+        }
         
     }
 }
