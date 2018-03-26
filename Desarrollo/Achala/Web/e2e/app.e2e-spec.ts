@@ -1,6 +1,6 @@
 import { AppPage } from './app.po';
 
-describe('achala App', () => {
+describe('web App', () => {
   let page: AppPage;
 
   beforeEach(() => {
