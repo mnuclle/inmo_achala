@@ -7,7 +7,7 @@ export class Inmueble {
   public superficieCubierta: number;
   public superficieTerreno: number;
   public superficieTotal: number;
-  public cantidadBaños: number;
+  public cantidadBanios: number;
   public cantidadAmbientes: number;
   public cantidadDormitorios: number;
   public antiguedad: number;
@@ -20,7 +20,7 @@ export class Inmueble {
   @JsonProperty({clazz: Imagen})
   public imagenes: Imagen[];
   public ubicacionDepartamentoId: number;
-  public aEstrenar: string;
+  public aEstrenar: boolean;
   public tipoEmprendimientoId: number;
 
   constructor(id?: number,
@@ -29,7 +29,7 @@ export class Inmueble {
               superficieCubierta?: number,
               superficieTerreno?: number,
               superficieTotal?: number,
-              cantidadBaños?: number,
+              cantidadBanios?: number,
               cantidadAmbientes?: number,
               cantidadDormitorios?: number,
               antiguedad?: number,
@@ -41,7 +41,7 @@ export class Inmueble {
               fechaModificacion?: Date,
               imagenes?: Imagen[],
               ubicacionDepartamentoId?: number,
-              aEstrenar?: string,
+              aEstrenar?: boolean,
               tipoEmprendimientoId?: number) {
     this.id = id ? id : null;
     this.nombre = nombre;
@@ -49,7 +49,7 @@ export class Inmueble {
     this.superficieCubierta = superficieCubierta;
     this.superficieTerreno = superficieTerreno;
     this.superficieTotal = superficieTotal;
-    this.cantidadBaños = cantidadBaños;
+    this.cantidadBanios = cantidadBanios;
     this.cantidadAmbientes = cantidadAmbientes;
     this.cantidadDormitorios = cantidadDormitorios;
     this.antiguedad = antiguedad;

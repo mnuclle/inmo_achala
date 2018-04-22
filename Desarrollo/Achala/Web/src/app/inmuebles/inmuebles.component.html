@@ -1,3 +1,74 @@
-<p>
-  {{inmueble}}
-</p>
+<h2>{{ inmueble.nombre }} Details</h2>
+<div><span>id: </span>{{inmueble.id}}</div>
+<div>
+  <label>nombre:
+    <input [(ngModel)]="inmueble.nombre" placeholder="name">
+  </label>
+</div>
+<div>
+  <label>descripcion
+    <input [(ngModel)]="inmueble.descripcion" placeholder="name">
+  </label>
+</div>
+<div>
+  <label>superficieCubierta:
+    <input [(ngModel)]="inmueble.superficieCubierta" placeholder="name">
+  </label>
+</div>
+
+<div>
+  <label>superficieTerreno:
+    <input [(ngModel)]="inmueble.superficieTerreno" placeholder="name">
+  </label>
+</div>
+<div>
+  <label>superficieTotal:
+    <input [(ngModel)]="inmueble.superficieTotal" placeholder="name">
+  </label>
+</div>
+<div>
+  <label>cantidadBanios:
+    <input [(ngModel)]="inmueble.cantidadBanios" placeholder="name">
+  </label>
+</div>
+<div>
+  <label>cantidadAmbientes:
+    <input [(ngModel)]="inmueble.cantidadAmbientes" placeholder="name">
+  </label>
+</div>
+<div>
+  <label>cantidadDormitorios:
+    <input [(ngModel)]="inmueble.cantidadDormitorios" placeholder="name">
+  </label>
+</div>
+<div>
+  <label>antiguedad:
+    <input [(ngModel)]="inmueble.antiguedad" placeholder="name">
+  </label>
+</div>
+<div><span>domicilioId: </span>{{inmueble.domicilioId}}</div>
+<div><span>tipoPropiedadId: </span>{{inmueble.tipoPropiedadId}}</div>
+<div><span>estadoInmuebleId: </span>{{inmueble.estadoInmuebleId}}</div>
+<div>
+  <label>fechaBaja:
+    <input type="date" [(ngModel)]="inmueble.fechaBaja" placeholder="name">
+  </label>
+</div>
+<div>
+  <label>fechaAlta:
+    <input type="date" [(ngModel)]="inmueble.fechaAlta" placeholder="name">
+  </label>
+</div>
+<div>
+  <label>fechaModificacion:
+    <input type="date" [(ngModel)]="inmueble.fechaModificacion" placeholder="name">
+  </label>
+</div>
+<div><span>imagenes: </span>{{inmueble.imagenes}}</div>
+<div><span>ubicacionDepartamentoId: </span>{{inmueble.ubicacionDepartamentoId}}</div>
+<div>
+  <label>aEstrenar:
+    <input type="checkbox" [(ngModel)]="inmueble.aEstrenar" placeholder="name">
+  </label>
+</div>
+<div><span>tipoEmprendimientoId: </span>{{inmueble.tipoEmprendimientoId}}</div>

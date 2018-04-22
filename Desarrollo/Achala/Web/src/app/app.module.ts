@@ -1,9 +1,12 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { FormsModule } from '@angular/forms';
 
 
 import { AppComponent } from './app.component';
 import { InmueblesComponent } from './inmuebles/inmuebles.component';
+import {InmuebleService} from './inmuebles/inmueble.service';
 
 
 @NgModule({
@@ -12,9 +15,13 @@ import { InmueblesComponent } from './inmuebles/inmuebles.component';
     InmueblesComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    NgbModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [
+    InmuebleService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -41,6 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BarrioServicio.cs" />
+    <Compile Include="FileServicio.cs" />
     <Compile Include="ImagenInmuebleServicio.cs" />
     <Compile Include="InmuebleServicio.cs" />
     <Compile Include="LocalidadServicio.cs" />

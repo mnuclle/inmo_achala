@@ -15,7 +15,7 @@ namespace Mapeos
             Table("IMAGENES_X_INMUEBLE");
             Id(x => x.Id).Column("ID_IMAGEN_X_INMUEBLE").GeneratedBy.Identity();
             Map(x => x.Path).Column("PATH").Nullable().Length(500);
-            References(x => x.Inmueble).Column("ID_INMUEBLE").Not.Nullable();
+            References<Inmueble>(x => x.Inmueble,"ID_INMUEBLE").Fetch.Join().Not.LazyLoad();
         }
     }
 }

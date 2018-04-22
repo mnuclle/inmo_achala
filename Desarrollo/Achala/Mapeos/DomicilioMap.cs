@@ -23,8 +23,8 @@ namespace Mapeos
             Map(x => x.Lote).Column("LOTE").Nullable().Length(100);
             Map(x => x.Latitud).Column("LATITUD").Nullable().Length(50);
             Map(x => x.Longitud).Column("LONGITUD").Nullable().Length(50);
-            References<Barrio>(x => x.Barrio).Column("ID_BARRIO").Nullable();
-            References<Localidad>(x => x.Localidad).Column("ID_LOCALIDAD").Nullable();
+            References<Barrio>(x => x.Barrio).Column("ID_BARRIO").Nullable().Not.LazyLoad();
+            References<Localidad>(x => x.Localidad).Column("ID_LOCALIDAD").Nullable().Not.LazyLoad();
             Map(x => x.TipoBarrio).Column("ID_TIPO_BARRIO").CustomType<TipoBarrio>().Nullable();
         }
     }

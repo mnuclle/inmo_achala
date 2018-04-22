@@ -33,7 +33,7 @@ namespace Mapeos
             Map(x => x.UbicacionDepartamento).Column("ID_UBICACION_DEPARTAMENTO").CustomType<UbicacionDepartamento>().Nullable();
             Map(x => x.AEstrenar).Column("A_ESTRENAR").Nullable();
             Map(x => x.TipoEmprendimiento).Column("ID_TIPO_EMPRENDIMIENTO").CustomType<TipoEmprendimiento>().Nullable();
-            HasMany(x => x.Imagenes).AsBag().KeyColumn("ID_IMAGEN_X_INMUEBLE");
+            HasMany(x => x.Imagenes).KeyColumns.Add("ID_INMUEBLE").AsBag().Inverse().Cascade.All();
         }
     }
 }

@@ -24,14 +24,42 @@ namespace Servicios
         public void Guardar(Inmueble inmueble)
         {
             _inmuebleRepositorio.Guardar(inmueble);
-            if (inmueble.Imagenes != null)
+            /*IList<Inmueble> listaTodos = ObtenerTodos();
+            Inmueble idInmueble = null;
+            foreach (var inmuebleReg in listaTodos)
             {
-                foreach (var imagen in inmueble.Imagenes)
+                if (
+                    inmueble.Nombre == inmuebleReg.Nombre &&
+                    inmueble.Descripcion == inmuebleReg.Descripcion &&
+                    inmueble.CantidadAmbientes == inmuebleReg.CantidadAmbientes &&
+                    inmueble.CantidadBaños == inmuebleReg.CantidadBaños &&
+                    inmueble.CantidadDormitorios == inmuebleReg.CantidadDormitorios &&
+                    inmueble.AEstrenar == inmuebleReg.AEstrenar &&
+                    inmueble.Antiguedad == inmuebleReg.Antiguedad &&
+                    inmueble.SuperficieCubierta == inmuebleReg.SuperficieCubierta &&
+                    inmueble.SuperficieTerreno == inmuebleReg.SuperficieTerreno &&
+                    inmueble.SuperficieTotal == inmuebleReg.SuperficieTotal &&
+                    inmueble.TipoEmprendimiento == inmuebleReg.TipoEmprendimiento &&
+                    inmueble.TipoPropiedad == inmuebleReg.TipoPropiedad &&
+                    inmueble.UbicacionDepartamento == inmuebleReg.UbicacionDepartamento
+                )
                 {
-                    imagen.Inmueble = inmueble;
-                    _imagenInmuebleRepositorio.Guardar(imagen);
-                }
+                    idInmueble = inmuebleReg;
+                    break;
+                };
             }
+
+            if (idInmueble != null)
+            {
+                if (inmueble.Imagenes != null)
+                {
+                    foreach (var imagen in inmueble.Imagenes)
+                    {
+                        imagen.Inmueble = idInmueble;
+                        _imagenInmuebleRepositorio.Guardar(imagen);
+                    }
+                }
+            }*/
         }
 
         public Inmueble ObtenerPorId(int id)

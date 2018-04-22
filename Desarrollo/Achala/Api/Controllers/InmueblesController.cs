@@ -17,11 +17,13 @@ namespace Api.Controllers
         private readonly InmuebleServicio _inmuebleServicio;
         private readonly BarrioServicio _barrioServicio;
         private readonly LocalidadServicio _localidadServicio;
+        private readonly FileServicio _fileServicio;
 
-        public InmueblesController(InmuebleServicio inmuebleServicio,BarrioServicio barrioServicio, LocalidadServicio localidadServicio) {
+        public InmueblesController(InmuebleServicio inmuebleServicio,BarrioServicio barrioServicio, LocalidadServicio localidadServicio, FileServicio fileServicio) {
             this._inmuebleServicio = inmuebleServicio;
             this._barrioServicio = barrioServicio;
             this._localidadServicio = localidadServicio;
+            this._fileServicio = fileServicio;
         }
 
         // GET: api/Inmuebles
@@ -84,7 +86,26 @@ namespace Api.Controllers
             inmueble.TipoEmprendimiento = cmd.IdTipoEmprendimiento;
             inmueble.FechaAlta = DateTime.Now;
             inmueble.FechaModificacion = DateTime.Now;
+            inmueble.Imagenes = new List<ImagenInmueble>();
 
+            if (cmd.Imagenes != null)
+            {
+                foreach (var imagen in cmd.Imagenes)
+                {
+                    string path = _fileServicio.GuardarFile(imagen);
+
+                    if (path != null)
+                    {
+                        ImagenInmueble imagenInmueble = new ImagenInmueble()
+                        {
+                            Inmueble = inmueble,
+                            Path = path
+                        };
+                        inmueble.Imagenes.Add(imagenInmueble);
+                    }
+                }
+            }
+            
             _inmuebleServicio.Guardar(inmueble);
             return Ok();
         }

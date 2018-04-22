@@ -21,7 +21,7 @@ namespace Modelo
         public virtual Domicilio Domicilio { get; set; }
         public virtual TipoPropiedad TipoPropiedad { get; set; }
         public virtual EstadoInmueble EstadoInmueble { get; set; }
-        public virtual DateTime FechaBaja { get; set; }
+        public virtual DateTime? FechaBaja { get; set; }
         public virtual DateTime FechaAlta { get; set; }
         public virtual DateTime FechaModificacion { get; set; }
         public virtual IList<ImagenInmueble> Imagenes { get; set; }

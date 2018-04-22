@@ -23,3 +23,16 @@ D:\Manu\inmo\inmo_achala\Desarrollo\Achala\Infraestructura\Core\bin\Debug\System
 D:\Manu\inmo\inmo_achala\Desarrollo\Achala\Infraestructura\Core\bin\Debug\System.Web.Http.xml
 D:\Manu\inmo\inmo_achala\Desarrollo\Achala\Infraestructura\Core\bin\Debug\es\System.Net.Http.Formatting.resources.dll
 D:\Manu\inmo\inmo_achala\Desarrollo\Achala\Infraestructura\Core\bin\Debug\es\System.Web.Http.resources.dll
+D:\Repos\Achala\inmo_achala\Desarrollo\Achala\Infraestructura\Core\bin\Debug\Core.dll.config
+D:\Repos\Achala\inmo_achala\Desarrollo\Achala\Infraestructura\Core\bin\Debug\Core.dll
+D:\Repos\Achala\inmo_achala\Desarrollo\Achala\Infraestructura\Core\bin\Debug\Core.pdb
+D:\Repos\Achala\inmo_achala\Desarrollo\Achala\Infraestructura\Core\bin\Debug\Newtonsoft.Json.dll
+D:\Repos\Achala\inmo_achala\Desarrollo\Achala\Infraestructura\Core\bin\Debug\System.Net.Http.Formatting.dll
+D:\Repos\Achala\inmo_achala\Desarrollo\Achala\Infraestructura\Core\bin\Debug\System.Web.Http.dll
+D:\Repos\Achala\inmo_achala\Desarrollo\Achala\Infraestructura\Core\bin\Debug\Newtonsoft.Json.xml
+D:\Repos\Achala\inmo_achala\Desarrollo\Achala\Infraestructura\Core\bin\Debug\System.Net.Http.Formatting.xml
+D:\Repos\Achala\inmo_achala\Desarrollo\Achala\Infraestructura\Core\bin\Debug\System.Web.Http.xml
+D:\Repos\Achala\inmo_achala\Desarrollo\Achala\Infraestructura\Core\obj\Debug\Core.csprojResolveAssemblyReference.cache
+D:\Repos\Achala\inmo_achala\Desarrollo\Achala\Infraestructura\Core\obj\Debug\Core.csproj.CoreCompileInputs.cache
+D:\Repos\Achala\inmo_achala\Desarrollo\Achala\Infraestructura\Core\obj\Debug\Core.dll
+D:\Repos\Achala\inmo_achala\Desarrollo\Achala\Infraestructura\Core\obj\Debug\Core.pdb
